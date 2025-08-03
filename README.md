@@ -1,1 +1,2 @@
-# bothax
+## Bothax Lua Documentation
+
