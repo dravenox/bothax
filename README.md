@@ -66,18 +66,15 @@
 * [Vec2](#vec2)
 * [HttpResponse](#httpresponse)
 
-
-# Structures
 ## ClientNPC
 ```lua
 local structure = {
-int: id
-int: type
-vec2: pos
-vec2: target
+int → id
+int → type
+vec2 → pos
+vec2 → target
 }
 ```
-
 ## DungeonNPC
 ```lua
 local structure = {
@@ -86,5 +83,13 @@ int → y
 int → state
 int → flags
 int → flags2
+}
+```
+## ENetClient
+```lua
+local structure = {
+string → address
+int → port
+int → ping
 }
 ```
