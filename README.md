@@ -69,46 +69,46 @@
 ## ClientNPC
 ```lua
 local structure = {
-int → id
-int → type
-vec2 → pos
-vec2 → target
+int: id
+int: type
+vec2: pos
+vec2: target
 }
 ```
 ## DungeonNPC
 ```lua
 local structure = {
-int → x
-int → y
-int → state
-int → flags
-int → flags2
+int: x
+int: y
+int: state
+int: flags
+int: flags2
 }
 ```
 ## ENetClient
 ```lua
 local structure = {
-string → address
-int → port
-int → ping
+string: address
+int: port
+int: ping
 }
 ```
 ## GameUpdatePacket
 ```lua
 local structure = {
-int → type
-int → dropped
-int → netid or player_flags
-int → snetid or secondnetid
-int → state or characterstate
-int → value or int_data
-float → x or pos_x
-float → xspeed
-float → yspeed
-int → px or tx or int_x
-int → py or ty or int_y
-int → padding1
-int → padding2
-float → padding4
-int → extrasize
+int: type
+int: dropped
+int: netid or player_flags
+int: snetid or secondnetid
+int: state or characterstate
+int: value or int_data
+float: x or pos_x
+float: xspeed
+float: yspeed
+int: px or tx or int_x
+int: py or ty or int_y
+int: padding1
+int: padding2
+float: padding4
+int: extrasize
 ```
