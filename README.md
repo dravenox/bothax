@@ -261,7 +261,7 @@ string: method,
 string: content
 }
 ```
-`-----------------------------------`
+`------------------------------`
 ## BothaxHook 
 * `OnVariant`
 * `OnSendPacket`
