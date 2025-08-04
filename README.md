@@ -93,3 +93,6 @@ int → port
 int → ping
 }
 ```
+## GameUpdatePacket
+```lua
+local structure = {
