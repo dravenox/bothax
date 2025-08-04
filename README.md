@@ -1,10 +1,8 @@
 ### Bothax Lua Documentation
 * [Discord Server]()
 
-* `Script Path:`
-```lua
-Android/media/com.rtsoft.growtopia/scripts/file.lua
-```
+* **Script Path**
+`Android/media/com.rtsoft.growtopia/scripts/file.lua`
 
 ### Function 
 * [AddHook](#addhook)
