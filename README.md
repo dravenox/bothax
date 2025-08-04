@@ -96,3 +96,19 @@ int → ping
 ## GameUpdatePacket
 ```lua
 local structure = {
+int → type
+int → dropped
+int → netid or player_flags
+int → snetid or secondnetid
+int → state or characterstate
+int → value or int_data
+float → x or pos_x
+float → xspeed
+float → yspeed
+int → px or tx or int_x
+int → py or ty or int_y
+int → padding1
+int → padding2
+float → padding4
+int → extrasize
+```
