@@ -65,3 +65,26 @@
 * [WorldCamera](#worldcamera)
 * [Vec2](#vec2)
 * [HttpResponse](#httpresponse)
+
+
+# Structures
+## ClientNPC
+```lua
+local structure = {
+int: id
+int: type
+vec2: pos
+vec2: target
+}
+```
+
+## DungeonNPC
+```lua
+local structure = {
+int → x
+int → y
+int → state
+int → flags
+int → flags2
+}
+```
