@@ -6,7 +6,7 @@
 Android/media/com.rtsoft.growtopia/scripts/file.lua
 ```
 
-## Function 
+### Function 
 * [AddHook](#addhook)
 * [ChangeValue](#changevalue)
 * [CheckPath](#checkpath)
@@ -49,3 +49,21 @@ Android/media/com.rtsoft.growtopia/scripts/file.lua
 * [SetItemSelected](#setitemselected)
 * [SetTileFlags](#settileflags)
 * [Sleep](#sleep)
+
+### Structure 
+* [ClientNPC](#clientnpc)
+* [DungeonNPC](#dungeonnpc)
+* [ENetClient](#enetclient)
+* [GameUpdatePacket](#gameupdatepacket)
+* [ItemInfo](#iteminfo)
+* [Inventory](#inventory)
+* [Netavatar](#netavatar)
+* [PlayerItems](#playeritems)
+* [Tile](#tile)
+* [TileExtra](#tileextra)
+* [TileFlags](#tileflags)
+* [World](#world)
+* [Object](#worldobject)
+* [WorldCamera](#worldcamera)
+* [Vec2](#vec2)
+* [HttpResponse](#httpresponse)
