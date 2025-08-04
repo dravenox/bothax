@@ -1,4 +1,4 @@
-## Bothax Lua Documentation
+### Bothax Lua Documentation
 * [Discord Server]()
 
 * `Script Path:`
