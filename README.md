@@ -11,6 +11,8 @@
 * [CheckPath](#checkpath)
 * [Encrypt](#encrypt)
 * [EncryptFile](#encryptfile)
+* [LoadEncrypt](#loadencrypt)
+* [LoadEncryptedFile](#loadencryptedfile)
 * [FindPath](#findpath)
 * [GetCamera](#getcamera)
 * [GetClient](#getclient)
@@ -33,8 +35,6 @@
 * [GetWorld](#getworld)
 * [Hash32](#hash32)
 * [Hash64](#hash64)
-* [LoadEncrypt](#loadencrypt)
-* [LoadEncryptedFile](#loadencryptedfile)
 * [MakeRequest](#makerequest)
 * [RemoveHook](#removehook)
 * [RemoveHooks](#removehooks)
@@ -261,7 +261,7 @@ string: method,
 string: content
 }
 ```
-`------------------------------`
+`-----------------------------------`
 ## BothaxHook 
 * `OnVariant`
 * `OnSendPacket`
@@ -273,9 +273,10 @@ string: content
 ## AddHook 
 `AddHook(string: BothaxHook, int/string: HookLabel, function: callback)`
 
-* Example :
+* `Example :`
+
+* `OnVariant`
 ```lua 
--- OnVariant:
 AddHook('OnVariant', 'BothaxYt', function(var, netid, delay)
 		if var[0] == 'OnDialogRequest' then
 		  	LogToConsole('Blocked a Dialog!')
@@ -283,12 +284,226 @@ AddHook('OnVariant', 'BothaxYt', function(var, netid, delay)
 		end 
 end)
 ``` 	
+
+* `OnSendPacket`
 ```lua 
--- OnSendPacketRaw:
+AddHook('OnSendPacket', 0101, function(type, packet)
+		if packet:find('/hi') then
+		  	LogToConsole('Hello World!')
+		  	return true 
+		end 
+end)
+```
+
+* `OnSendPacketRaw`
+```lua 
 AddHook('OnSendPacketRaw', 'BothaxYt', function(packet)
 		if packet.type == 3 then
 		  	LogToConsole('Blocked Punch / Place Packet!')
 		  	return true 
 		end 
 end)
+```
+
+* `OnProcessTankUpdate`
+```lua 
+AddHook('OnProcessTankUpdate', 'BothaxYt', function(packet)
+		if packet.type == 34 then
+		  	LogToConsole('Detected NPCs Move.')
+		end
+end)
+```
+
+* `OnWorldTouch`
+```lua 
+AddHook('OnWorldTouch', 'BothaxYt', function(pos, start)
+		if start then
+		  	LogToConsole('Tile touched: '.. string.format('(%d, %d)'), pos.x // 32, pos.y // 32)
+		end
+end)
+```
+
+* `OnDraw`
+```lua 
+AddHook('OnDraw', 'BothaxYt', function(deltatime)
+		if ImGui.Begin('Hello World') then
+		  	ImGui.Text('Hello World!, Delta Time: '.. tostring(deltatime))
+		end
+		ImGui.End()
+end)
+```
+
+* `OnInput`
+```lua 
+AddHook('OnInput', 'BothaxYt', function(key)
+		 LogToConsole('Key Pressed: '.. string.char(key))
+end)
+```
+## ChangeValue 
+`ChangeValue(string: name, any: value)`
+
+**Description :**
+* `enables or disables a specific feature or modifies its value by name. the value can be of type boolean, string, or number, depending on the feature being modified.`
+
+**Properties :**
+* `string: name → the name of the feature or setting to change.`
+* `any: value → the new value to assign to the feature. Can be a boolean, string, hex code, or number depending on the feature.`
+* `no return value.`
+
+**Example :**
+```lua 
+ChangeValue('[C] ModFly', true)
+ChangeValue('[M] Network text color', 0xFFFFFFFF)
+ChangeValue('[A] Farm: Break delay', 300)
+```
+## CheckPath 
+`checkPath(int: tilex, int: tiley) → boolean`
+
+**Description :**
+* `checks if a path is walkable at the given tile coordinates.`
+
+**Properties :**
+* `int: x → X coodinate of the tile`
+* `int: y → Y coodinate of the tile`
+* `return boolean: true, if the tile is walkable, false otherwise`
+
+**Example :**
+```lua 
+if CheckPath(0, 0) then 
+		FindPath(0, 0)
+end
+```
+## Encrypt 
+`Encrypt(string: text[, int: key]) → string`
+
+**Description :**
+* `encrypts the given plain text into a secure, encoded string format, useful for hiding or securing data before transmission or storage.`
+
+**Properties :**
+* `string: text → the plain text string you want to enc.`
+* `int: key → an optional key used for encryption`
+* `return string: the encrypted version of the input string.`
+
+**Example :**
+```lua 
+local secret = Encrypt('assalamualaikum')
+LogToConsole(secret)
+-- 
+local secret = Encrypt('assalamualaikum', 123) 
+LogToConsole(secret)
+```
+## EncryptFile 
+`EncryptFile(string: filename[, int: key])`
+
+**Description :**
+* `encrypt a file from the script directory, the encrypted file will be saved as (filename)_enc`
+
+**Properties :**
+* `string: filename`
+* `int: key → an optional key used for encryption`
+* `no return value`
+
+**Example :**
+```lua 
+EncryptFile('script.lua')
+EncryptFile('script.lua', 123)
+```
+## LoadEncrypt
+`LoadEncrypt(string: encryptedText)`
+
+**Description :**
+* `run encrypted text as lua script`
+
+**Parameter :**
+* `string: encyptedText → the encrypted text string to decrypt and execute.`
+* `no return value, this function executes the content internally; it does not return a result.`
+
+**Example :**
+```lua 
+local script = Encrypt("LogToConsole('hello world!')")
+LoadEncrypt(script)
+```
+## LoadEncryptedFile
+`LoadEncryptedFile(string: filename)`
+
+**Description :**
+* `run encrypted file from the script directory`
+
+**Properties :**
+* `string: filename → the name of encrypted file to load and execute.`
+* `no return value`
+
+**Example :**
+```lua 
+LoadEncryptedFile('script.lua')
+```
+## FindPath 
+`FindPath(int: tilex, int: tiley)`
+
+**Description :**
+* `teleports the player to the specified tile coordinate (tilex, tiley)`
+
+**Properties :**
+* `int: tilex → X coordinate of the destination tile`
+* `int: tilex → Y coordinate of the destination tile`
+* `no return value`
+
+**Example :**
+```lua
+FindPath(0, 0)
+```
+## GetCamera
+`GetCamera() → WorldCamera`
+
+**Description :**
+* `return the world camera information`
+* [WorldCamera](#worldcamera)
+
+**Example :**
+```lua 
+local cam = GetCamera()
+LogToConsole("Camera Position: " .. cam.pos.x .. ", " .. cam.pos.y)
+LogToConsole("Camera Center: " .. cam.center.x .. ", " .. cam.center.y)
+LogToConsole("Camera Scale: " .. cam.scale)
+LogToConsole("Resolution: " .. cam.resolution.x .. "x" .. cam.resolution.y)
+```
+## GetClient 
+`GetClient() → ENetClient`
+
+**Description :**
+* `return information about the current ENet client connection`
+* [ENetClient](#enetclient)
+
+**Example :**
+```lua 
+local client = GetClient()
+LogToConsole("Connected to: " .. client.address .. ":" .. client.port)
+LogToConsole("Ping: " .. client.ping .. "ms")
+```
+## GetInventory
+`GetInventory() → Inventory[]`
+
+**Description :**
+* `returns the player current inventory as a list (array) of items, each item contains its id, quantity (amount), and item flags.`
+* [Inventory](#inventory)
+
+**Example :**
+```lua
+for _, item in pairs(GetInventory()) do 
+		LogToConsole('item id '.. item.id .', amount '.. item.amount ..', flags '.. item.flags)
+end 
+```
+## GetItemByIDSafe
+`GetItemByIDSafe(int: itemid) → ItemInfo`
+
+**Description :**
+* `returns detailed item data from the game item database based on the given itemid`
+
+**Properties :**
+* `int: itemid → the item id to look up`
+* [ItemInfo](#iteminfo)
+
+**Example :**
+```lua
+LogToConsole(GetItemByIDSafe(242).name)
 ```
