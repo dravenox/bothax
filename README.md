@@ -1,8 +1,9 @@
 ### Bothax Lua Documentation
 [![BothaxYT Community](https://invite.casperiv.dev?inviteCode=jFWte2Gu9z)](https://discord.gg/jFWte2Gu9z)
 
-* **Script Path**
-`Android/media/com.rtsoft.growtopia/scripts/file.lua`
+* `Script Path :`
+```lua Android/media/com.rtsoft.growtopia/scripts/file.lua
+```
 
 * `kalo ad yang salah atau kurang mohon di maafkan yah, tag aku aja di discord emuach :)`
 
