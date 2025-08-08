@@ -1,9 +1,14 @@
 ### Bothax Lua Documentation
+* `Thanks To @bawt & @rvna__ for helping <3`
+
 * `Bothax Server :`
 [![BothaxYT Community](https://invite.casperiv.dev?inviteCode=jFWte2Gu9z)](https://discord.gg/jFWte2Gu9z)
 
-* `My Server :`
+* `Satan Server :`
 [![Satan Community](https://invite.casperiv.dev?inviteCode=dbqgG2FySZ)](dbqgG2FySZ)
+
+* `Rvnaa A.K.A Yasugami Server :`
+[![Rvnaa Community](https://invite.casperiv.dev?inviteCode=5CAYpDCmSg)(5CAYpDCmSg)
 
 * `Script Path :`
 ```lua Android/media/com.rtsoft.growtopia/scripts/file.lua
