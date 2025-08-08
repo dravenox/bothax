@@ -4,7 +4,7 @@
 * **Script Path**
 `Android/media/com.rtsoft.growtopia/scripts/file.lua`
 
-* `kalo ada yang salah nulis maaf ya, ga ngerti english :)`
+* `kalo ad yang salah atau kurang mohon di maafkan yah, tag aku aja di discord emuach :)`
 
 ### Function 
 * [BothaxHook](#bothaxhook)
