@@ -5,10 +5,10 @@
 [![BothaxYT Community](https://invite.casperiv.dev?inviteCode=jFWte2Gu9z)](https://discord.gg/jFWte2Gu9z)
 
 * `Satan Server :`
-[![Satan Community](https://invite.casperiv.dev?inviteCode=dbqgG2FySZ)](dbqgG2FySZ)
+[![Satan Community](https://invite.casperiv.dev?inviteCode=dbqgG2FySZ)](https://discord.gg/dbqgG2FySZ)
 
 * `Rvnaa A.K.A Yasugami Server :`
-[![Rvnaa Community](https://invite.casperiv.dev?inviteCode=5CAYpDCmSg)(5CAYpDCmSg)
+[![Rvnaa Community](https://invite.casperiv.dev?inviteCode=5CAYpDCmSg)(https://discord.gg/5CAYpDCmSg)
 
 * `Script Path :`
 ```lua Android/media/com.rtsoft.growtopia/scripts/file.lua
