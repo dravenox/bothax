@@ -11,8 +11,7 @@
 [![Rvnaa Community](https://invite.casperiv.dev?inviteCode=5CAYpDCmSg)](https://discord.gg/5CAYpDCmSg)
 
 * `Script Path :`
-```lua Android/media/com.rtsoft.growtopia/scripts/file.lua
-```
+`Android/media/com.rtsoft.growtopia/scripts/file.lua`
 
 * `kalo ad yang salah atau kurang mohon di maafkan yah, tag aku aja di discord emuach :)`
 
