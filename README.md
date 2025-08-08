@@ -1,5 +1,5 @@
 ### Bothax Lua Documentation
-* [Discord Server](https://discord.gg/jFWte2Gu9z)
+* [![BothaxYT Community](https://invite.casperiv.dev?inviteCode=jFWte2Gu9z)](https://discord.gg/jFWte2Gu9z)
 
 * **Script Path**
 `Android/media/com.rtsoft.growtopia/scripts/file.lua`
