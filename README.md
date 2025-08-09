@@ -10,8 +10,16 @@
 * `Rvnaa A.K.A Yasugami Server :`
 [![Rvnaa Community](https://invite.casperiv.dev?inviteCode=5CAYpDCmSg)](https://discord.gg/5CAYpDCmSg)
 
-* `Script Path :`
-`Android/media/com.rtsoft.growtopia/scripts/file.lua`
+* `Script Path for Android :`
+```
+Android/media/com.rtsoft.growtopia/scripts/file.lua
+```
+
+* `Script Path for Windows :`
+Win + R and type
+```
+%appdata%\Growtopia\scripts
+```
 
 * `kalo ad yang salah atau kurang mohon di maafkan yah, tag aku aja di discord emuach :)`
 
