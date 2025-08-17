@@ -370,9 +370,9 @@ end)
 
 **Example :**
 ```lua 
-ChangeValue('[C] ModFly', true)
-ChangeValue('[M] Network text color', 0xFFFFFFFF)
-ChangeValue('[A] Farm: Break delay', 300)
+ChangeValue("[C] ModFly", true)
+ChangeValue("[M] Network text color", 0xFFFFFFFF)
+ChangeValue("[A] Farm: Break delay", 300)
 ```
 ## CheckPath 
 `checkPath(int: tilex, int: tiley) => boolean`
